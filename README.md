@@ -2,7 +2,7 @@
 
 A beginner-friendly machine-learning project that uses health measurements to classify diabetes outcome as a binary label. The workflow is in a Jupyter notebook and covers data exploration, visualization, preprocessing, model comparison, tuning, and evaluation. There is currently no web app or user interface.
 
-> **Educational use only:** This project is not a medical diagnostic tool. Do not use its predictions for health or treatment decisions.
+
 
 ## Project Goal
 
