@@ -72,9 +72,21 @@ python -m jupyter lab
 
 Open `Diabetes-Binary-classification.ipynb` and run all cells in order. The notebook loads the local CSV, displays its analysis and evaluation results, then creates `diabetes_model.pkl` and `diabetes_scaler.pkl` in the project directory. Those generated files remain local and are ignored by Git.
 
+## Streamlit interface
+
+The Streamlit app uses the saved notebook model and scaler when both are present. If they are not present, it trains a Logistic Regression model from the local `diabetes.csv` on first launch and caches it for the session.
+
+```bash
+python -m pip install -r requirements.txt
+python -m streamlit run app.py
+```
+
+The app accepts the eight health measurements and displays the model's classification and diabetes-class score. It is an educational demonstration, not a clinical tool.
+
 ## Project Files
 
 - `Diabetes-Binary-classification.ipynb` - notebook with the analysis and modeling workflow.
+- `app.py` - Streamlit interface for local predictions.
 - `requirements.txt` - Python dependencies.
 - `.gitignore` - excludes the local dataset, generated model files, and local environment/editor files.
 - `diabetes.csv` - required local dataset; intentionally not tracked by Git.
@@ -84,4 +96,3 @@ Open `Diabetes-Binary-classification.ipynb` and run all cells in order. The note
 - This project is for learning and experimentation, not clinical use.
 - The classes are imbalanced, so accuracy alone does not describe model performance; inspect diabetes-class recall, precision, F1-score, and the confusion matrix.
 - The notebook currently imputes missing measurements and removes outliers before the train/test split. This can leak information into evaluation. For a more reliable estimate, fit preprocessing only on training folds using a scikit-learn pipeline and stratify the train/test split.
-- The project is notebook-only. A user interface has not been implemented.
