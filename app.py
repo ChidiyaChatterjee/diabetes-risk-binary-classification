@@ -450,17 +450,19 @@ def validate_inputs(values):
     if values["BloodPressure"] <= 0:
         errors.append("Blood Pressure must be greater than 0.")
 
-    if values["SkinThickness"] < 0:
-        errors.append("Skin Thickness cannot be negative.")
+    if values["SkinThickness"] <= 0:
+        errors.append("Skin Thickness must be greater than 0.")
 
-    if values["Insulin"] < 0:
-        errors.append("Insulin cannot be negative.")
+    if values["Insulin"] <= 0:
+        errors.append("Insulin must be greater than 0.")
 
     if values["BMI"] <= 0:
         errors.append("BMI must be greater than 0.")
 
     if values["DiabetesPedigreeFunction"] < 0:
-        errors.append("Diabetes Pedigree Function cannot be negative.")
+        errors.append(
+            "Diabetes Pedigree Function cannot be negative."
+        )
 
     if values["Age"] <= 0:
         errors.append("Age must be greater than 0.")

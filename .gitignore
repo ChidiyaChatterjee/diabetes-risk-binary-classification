@@ -13,8 +13,7 @@ env/
 # Jupyter
 .ipynb_checkpoints/
 
-# Local dataset
-diabetes.csv
+
 
 # Generated model artifacts
 *.pkl
