@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments and local secrets
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local dataset
+diabetes.csv
+
+# Generated model artifacts
+*.pkl
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
